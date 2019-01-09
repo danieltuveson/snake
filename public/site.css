@@ -1,0 +1,32 @@
+html, body {
+  background-color: #788aa5;
+}
+
+.center {
+  text-align: center;
+}
+
+.game-container {
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+}
+
+
+.main-container {
+  margin-top: 10px;
+  padding: 50px 100px 50px 100px;
+  width: 500px;
+  background-color: #ffffc9;
+}
+
+#game {
+
+}
+
+
+.pixel {
+  border: 1px solid black;
+  width: 5px;
+  height: 5px;
+}
