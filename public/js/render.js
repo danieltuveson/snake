@@ -1,6 +1,8 @@
 import isSnakeSegment from './isSnakeSegment.js';
 
-const render = (game, snake, food, size) => {
+const render = (snake, food, size) => {
+  const game = document.createElement('div');
+  game.id = 'game';
   for (let rowIndex = 0; rowIndex < size; rowIndex++) {
     const row = document.createElement('div');
     row.className = 'row';
@@ -18,6 +20,7 @@ const render = (game, snake, food, size) => {
     }
     game.appendChild(row);
   }
+  return game;
 }
 
 export default render;
