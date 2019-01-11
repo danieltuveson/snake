@@ -34,7 +34,7 @@ const Game = () => {
       const oldGame = document.getElementById('game');
       const gameOver = document.createElement('div');
       gameOver.id = 'game-over';
-      gameOver.innerHTML = 'howdy';
+      gameOver.innerHTML = 'howdy again';
       gameContainer.replaceChild(gameOver, oldGame);
       // alert('GAME OVER');
       clearInterval(intervalId);
