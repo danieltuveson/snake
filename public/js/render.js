@@ -1,5 +1,6 @@
 import isSnakeSegment from './isSnakeSegment.js';
 
+// Generates game html element given new snake and food positions
 const render = (snake, food, size) => {
   const game = document.createElement('div');
   game.id = 'game';
