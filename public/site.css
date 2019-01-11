@@ -1,3 +1,14 @@
+/*
+Colors:
+  flame: #E4572E
+  sunny: #F0F66E
+  honneydew: #F0F8EA
+  laurel green: #A8C686
+  turtle green: #9D9C62
+
+*/
+
+
 html, body {
   background-color: #788aa5;
 }
@@ -6,39 +17,51 @@ html, body {
   text-align: center;
 }
 
+#game-over {
+  width: 300px;
+  height: 300px;
+  background: darkgreen;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
 #game {
-  /*border: 1px solid black;*/
   width: 300px;
   height: 300px;
 }
 
-#game-container {
-  /*margin-left: 15px;*/
+#title {
+  background-color: #F0F8EA;
 }
 
 .main-container {
   margin-top: 10px;
   padding: 50px 100px 50px 100px;
   width: 500px;
-  background-color: #ffffc9;
+  background-color: #A8C686;
 }
 
 
 /* Game styles */
 .pixel {
-  /*border: 1px solid black;*/
   width: 10px;
   height: 10px;
 }
 
 .snake {
+  border: 1px solid #F0F8EA;
   background-color: black;
 }
 
 .food {
-  background-color: red;
+  border: 1px solid #F0F8EA;
+  background-color: #E4572E;
 }
 
 .background {
-  background-color: #d9ddd2;
+  background-color: #F0F8EA;
 }

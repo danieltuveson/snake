@@ -3,8 +3,7 @@ import render from './render.js';
 import updateSnake from './updateSnake.js';
 import isGameOver from './isGameOver.js';
 import handleKeyPress from './handleKeyPress.js'
-import disableScroll from './disableScroll.js';
-import storeItems from './storeItems.js';
+import updateStorage from './updateStorage.js';
 
 const Game = () => {
   const gameContainer = document.getElementById('game-container');
@@ -12,7 +11,7 @@ const Game = () => {
   const snakeInit = [[5, 10], [6, 10], [7, 10]]; // row & col pairs identify position of segments
   const foodInit = getFoodPosition(snakeInit, size, false);
 
-  storeItems(snakeInit, foodInit, size);
+  updateStorage(snakeInit, foodInit, size);
   handleKeyPress();
   gameContainer.appendChild(render(snakeInit, foodInit, size)); // initialization
 
@@ -28,12 +27,18 @@ const Game = () => {
     // Update snake and food values 
     if (didSnakeGetFood) food = getFoodPosition(snake, size);
     snake = updateSnake(snake, snakeDirection, didSnakeGetFood);
-    storeItems(snake, food);
+    updateStorage(snake, food);
 
     // Checks for game over condition 
     if (isGameOver(snake, size)) {
-      alert('GAME OVER');
+      const oldGame = document.getElementById('game');
+      const gameOver = document.createElement('div');
+      gameOver.id = 'game-over';
+      gameOver.innerHTML = 'GAME OVER';
+      gameContainer.replaceChild(gameOver, oldGame);
+      // alert('GAME OVER');
       clearInterval(intervalId);
+      return;
     }
 
     // Updates game element 
@@ -42,7 +47,7 @@ const Game = () => {
 
     // Clear old items and store new ones
     sessionStorage.clear();
-    storeItems(snake, food, size);
+    updateStorage(snake, food, size);
   }, 200);
   
   

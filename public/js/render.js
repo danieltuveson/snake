@@ -4,6 +4,7 @@ import isSnakeSegment from './isSnakeSegment.js';
 const render = (snake, food, size) => {
   const game = document.createElement('div');
   game.id = 'game';
+  game.className = 'container';
   for (let rowIndex = 0; rowIndex < size; rowIndex++) {
     const row = document.createElement('div');
     row.className = 'row';
