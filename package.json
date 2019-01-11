@@ -10,7 +10,9 @@
   "author": "Daniel Tuveson",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
     "nodemon": "^1.18.9"
   }
 }
