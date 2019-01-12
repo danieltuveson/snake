@@ -1,8 +1,8 @@
-// Processes and stores keypresses 
-const handleKeyPress = () => {
-  document.onkeydown = (e) => {
-    sessionStorage.setItem('keyPressed', e.code);
-  }
-}
+// // Processes and stores keypresses 
+// const handleKeyPress = () => {
+//   document.onkeydown = (e) => {
+//     sessionStorage.setItem('keyPressed', e.code);
+//   }
+// }
 
-export default handleKeyPress;
+// export default handleKeyPress;
