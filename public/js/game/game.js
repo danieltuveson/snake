@@ -18,7 +18,6 @@ const game = (onGameOver) => {
   updateGameState(snakeInit, foodInit, sizeInit, scoreInit); 
   
   // Renders initial game state
-  renderScores(scoreInit);
   renderGame(snakeInit, foodInit, sizeInit);
 
   // Updates snake direction if arrow key is pressed
