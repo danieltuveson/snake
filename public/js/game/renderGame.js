@@ -1,10 +1,14 @@
 import isSnakeSegment from './isSnakeSegment.js';
 
 // Generates game html element given new snake and food positions
-const render = (snake, food, size) => {
+const renderGame = (snake, food, size) => {
+  const gameContainer = document.getElementById('game-container');
+  const menu = document.getElementById('menu');
+  const oldGame = document.getElementById('game');
   const game = document.createElement('div');
   game.id = 'game';
   game.className = 'container';
+
   for (let rowIndex = 0; rowIndex < size; rowIndex++) {
     const row = document.createElement('div');
     row.className = 'row';
@@ -22,7 +26,15 @@ const render = (snake, food, size) => {
     }
     game.appendChild(row);
   }
-  return game;
+
+  if (oldGame) {
+    gameContainer.replaceChild(game, oldGame);
+  } else if (menu) {
+    gameContainer.replaceChild(game, menu);
+  } else {
+    gameContainer.appendChild(game);
+  }
+  
 }
 
-export default render;
+export default renderGame;

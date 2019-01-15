@@ -3,7 +3,7 @@ const updateSnake = (snake, snakeDirectionString, didSnakeGetFood) => {
   const snakeHead = snake[0];
   const snakeNeck = snake[1];
   const currentDirection = [snakeHead[0] - snakeNeck[0], snakeHead[1] - snakeNeck[1]];
-  
+
   // converts string direction to array representing 
   const snakeDirection = (() => {
     switch (snakeDirectionString) {

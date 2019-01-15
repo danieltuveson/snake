@@ -1,8 +1,7 @@
 import isSnakeSegment from './isSnakeSegment.js';
 
 // Takes in snake body positions and size of gameboard, returns position of food
-const getFoodPositions = (snake, size) => {
-
+const updateFoodPositions = (snake, size) => {
   let positions = [];
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
@@ -14,4 +13,4 @@ const getFoodPositions = (snake, size) => {
   return food;
 }
 
-export default getFoodPositions;
+export default updateFoodPositions;

@@ -1,8 +1,7 @@
-
+// Updates high score
 const updateHighScore = (score) => {
   const highScore = localStorage.getItem('high-score');
-  console.log(highScore);
-  if (highScore === undefined || highScore < score) {
+  if (highScore === undefined || highScore <= score) {
     localStorage.clear();
     localStorage.setItem('high-score', score);
   }

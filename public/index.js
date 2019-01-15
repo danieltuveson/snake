@@ -1,5 +1,5 @@
-import Game from './js/game.js';
+import menu from './js/menu.js';
 import disableScroll from './js/disableScroll.js';
 
 disableScroll();
-Game();
+menu();
